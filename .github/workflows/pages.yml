@@ -1,0 +1,49 @@
+name: Publicar la web
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '*/30 * * * *'      # renueva la instantánea de respaldo (la web ya se actualiza sola en vivo)
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - name: Documentación (repositorio Docs)
+        run: git clone --depth 1 https://github.com/Open-Cosmic-Project/Docs.git .docs-src || echo '::warning::No se pudo clonar Docs; se publica sin documentación'
+      - name: Instantánea de la organización
+        run: node scripts/snapshot.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: npm run build
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist/site/browser
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,68 @@
+<div class="docs">
+  <button class="btn tonal toggle" ripple (click)="drawer.set(!drawer())" [attr.aria-expanded]="drawer()"><span class="ms">{{ drawer() ? 'close' : 'menu_book' }}</span>Índice y búsqueda</button>
+
+  <aside class="side glass" glass [class.open]="drawer()" aria-label="Índice de la documentación">
+    <label class="sbox"><span class="ms">search</span><span class="sr">Buscar en la documentación</span>
+      <input #search type="search" placeholder="Buscar…  ( / )" autocomplete="off" [value]="q()" (input)="onSearch($any($event.target).value)"></label>
+
+    @if (q().trim().length >= 2) {
+      <div class="results" aria-live="polite">
+        @if (searching()) { <p class="muted small">Buscando…</p> }
+        @else if (!hits().length) { <p class="muted small">Sin resultados para «{{ q() }}».</p> }
+        @for (h of hits(); track h.meta.slug) {
+          <a class="hit" [routerLink]="['/docs', h.meta.slug]" (click)="clear()">
+            <b>{{ h.meta.title }}</b><span class="muted label-s">{{ h.meta.section }}{{ h.meta.sub ? ' · ' + h.meta.sub : '' }}</span>
+            <span class="snip">{{ h.before }}<mark>{{ h.match }}</mark>{{ h.after }}</span>
+          </a>
+        }
+      </div>
+    } @else {
+      <nav class="tree">
+        @for (g of groups(); track g.section) {
+          <h3 class="label-s eyebrow">{{ g.section }}</h3>
+          @for (s of g.subs; track s.sub) {
+            @if (s.sub) { <h4 class="sub">{{ s.sub }}</h4> }
+            @for (p of s.pages; track p.slug) { <a [routerLink]="['/docs', p.slug]" [class.on]="p.slug === slug()" [attr.aria-current]="p.slug === slug() ? 'page' : null">{{ p.title }}</a> }
+          }
+        }
+        @if (!pages().length && svc.index()) { <p class="muted small">Aún no hay páginas publicadas.</p> }
+      </nav>
+    }
+  </aside>
+
+  <main class="main">
+    @switch (state()) {
+      @case ('listo') {
+        @if (page(); as p) {
+          <article class="paper glass" glass>
+            <div class="crumb label-s muted">
+              <a routerLink="/docs">Docs</a><span>/</span><span>{{ meta()?.section }}{{ meta()?.sub ? ' · ' + meta()?.sub : '' }}</span>
+              <span class="sp"></span><span>{{ minutes() }} min de lectura</span>
+            </div>
+            <div class="doc-body" #body [innerHTML]="html()" (click)="onBodyClick($event)"></div>
+            <footer class="pn">
+              <a class="btn text" [href]="p.edit" target="_blank" rel="noopener"><span class="ms">edit</span>Editar en GitHub</a>
+              <span class="sp"></span>
+              @if (prev(); as pv) { <a class="btn tonal" ripple [routerLink]="['/docs', pv.slug]"><span class="ms">arrow_back</span>{{ pv.title }}</a> }
+              @if (next(); as nx) { <a class="btn tonal" ripple [routerLink]="['/docs', nx.slug]">{{ nx.title }}<span class="ms">arrow_forward</span></a> }
+            </footer>
+          </article>
+        } @else if (!pages().length) {
+          <div class="paper glass empty" glass><span class="ms big">menu_book</span><h1 class="headline-s">Todavía no hay documentación publicada</h1>
+            <p class="muted">Cuando el repositorio <code>Docs</code> tenga archivos <code>.md</code> aparecerán aquí en el siguiente despliegue.</p><a class="btn filled" routerLink="/">Volver al inicio</a></div>
+        }
+      }
+      @case ('no-existe') {
+        <div class="paper glass empty" glass><span class="ms big">search_off</span><h1 class="headline-s">Esa página no existe</h1><p class="muted">Puede haberse renombrado o borrado en el repositorio.</p><a class="btn filled" routerLink="/docs">Ver el índice</a></div>
+      }
+      @default { <div class="paper glass skeleton" glass aria-busy="true"><i></i><i></i><i></i><i></i></div> }
+    }
+  </main>
+
+  <aside class="toc" aria-label="En esta página">
+    @if (page()?.toc?.length) {
+      <b class="label-s eyebrow">En esta página</b>
+      @for (t of page()!.toc; track t.id) { <a [href]="'#' + t.id" [class.l3]="t.level === 3" [class.on]="active() === t.id" (click)="$event.preventDefault(); active.set(t.id); scrollToId(t.id)">{{ t.text }}</a> }
+    }
+  </aside>
+</div>

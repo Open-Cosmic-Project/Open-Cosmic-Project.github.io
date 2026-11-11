@@ -1,0 +1,36 @@
+<oc-stars />
+<div class="aurora" aria-hidden="true"><i class="a1"></i><i class="a2"></i><i class="a3"></i></div>
+
+<header class="nav-wrap">
+  <nav class="nav glass glass-lens" glass [class.scrolled]="scrolled()" aria-label="Principal">
+    <a class="brand" routerLink="/" fragment="inicio" aria-label="Inicio"><svg viewBox="0 0 64 64" width="28" height="28" aria-hidden="true"><circle cx="32" cy="32" r="15" fill="var(--primary)"/><ellipse cx="32" cy="32" rx="28" ry="9" fill="none" stroke="var(--tone-rose)" stroke-width="3.5" transform="rotate(-24 32 32)"/></svg><b>OCP</b></a>
+    <ul class="links" [class.open]="menu()">
+      @for (n of nav; track n[0]) { <li><a routerLink="/" [fragment]="n[0]" [class.on]="!onDocs() && active() === n[0]" (click)="menu.set(false)">{{ n[1] }}</a></li> }
+      <li><a routerLink="/docs" [class.on]="onDocs()" (click)="menu.set(false)">Docs</a></li>
+    </ul>
+    <div class="act">
+      <button class="ib" ripple (click)="toggleTheme()" [attr.aria-label]="theme() === 'dark' ? 'Cambiar a tema claro' : 'Cambiar a tema oscuro'"><span class="ms">{{ theme() === 'dark' ? 'light_mode' : 'dark_mode' }}</span></button>
+      <a class="ib" ripple [href]="orgUrl" target="_blank" rel="noopener" aria-label="GitHub"><span class="ms">code</span></a>
+      <button class="ib burger" ripple (click)="menu.set(!menu())" [attr.aria-expanded]="menu()" aria-label="Menú"><span class="ms">{{ menu() ? 'close' : 'menu' }}</span></button>
+    </div>
+  </nav>
+</header>
+
+<main><router-outlet /></main>
+
+<footer class="foot">
+  <div class="glass inner" glass>
+    <div>
+      <b class="title-m">OpenCosmicProject</b>
+      <p class="muted">CosmicOS (nombre temporal) · desarrollo abierto y verificable.</p>
+      <p class="muted priv"><span class="ms">visibility_off</span>Sin cookies ni analítica. Para mostrar la actividad, tu navegador consulta la API pública de GitHub y carga los avatares desde sus servidores; las fuentes están alojadas aquí.</p>
+    </div>
+    <div class="fl"><a href="{{ orgUrl }}" target="_blank" rel="noopener">GitHub</a><a routerLink="/docs">Docs</a><a href="{{ orgUrl }}/Docs" target="_blank" rel="noopener">Docs en GitHub</a><a href="{{ orgUrl }}/.github/blob/main/SECURITY.md" target="_blank" rel="noopener">Seguridad</a><a href="?demo">Ver demo</a></div>
+  </div>
+</footer>
+
+@if (toast(); as t) {
+  <div class="toast glass" glass #toastEl role="status" [class]="'toast glass tone-' + t.tone">
+    <span class="ti"><span class="ms">{{ t.icon }}</span></span><span class="tx"><b>{{ t.text }}</b><small>{{ t.sub }}</small></span>
+  </div>
+}

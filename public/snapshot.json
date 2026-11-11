@@ -1,0 +1,152 @@
+{
+ "generatedAt": null,
+ "repos": [
+  {
+   "name": "Core",
+   "description": "Init (cinitd), supervisor (kernel.root), launcher y orquestador del sistema.",
+   "language": "Rust",
+   "license": "GPL-3.0",
+   "stars": 0,
+   "forks": 0,
+   "openIssues": 0,
+   "pushedAt": "",
+   "url": "https://github.com/Open-Cosmic-Project/Core"
+  },
+  {
+   "name": "Daemons",
+   "description": "Los ocho demonios: permisos, cortafuegos, logging, notificaciones, energía, push, ajustes y actualizaciones.",
+   "language": "Rust",
+   "license": "AGPL-3.0",
+   "stars": 0,
+   "forks": 0,
+   "openIssues": 0,
+   "pushedAt": "",
+   "url": "https://github.com/Open-Cosmic-Project/Daemons"
+  },
+  {
+   "name": "UI",
+   "description": "PhanteonWM, CreationDE, teclado en pantalla y pantalla de arranque.",
+   "language": "Rust",
+   "license": "GPL-3.0",
+   "stars": 0,
+   "forks": 0,
+   "openIssues": 0,
+   "pushedAt": "",
+   "url": "https://github.com/Open-Cosmic-Project/UI"
+  },
+  {
+   "name": "Pkg",
+   "description": "SPS, el gestor de paquetes .sps con repositorio firmado.",
+   "language": "Rust",
+   "license": "GPL-3.0",
+   "stars": 0,
+   "forks": 0,
+   "openIssues": 0,
+   "pushedAt": "",
+   "url": "https://github.com/Open-Cosmic-Project/Pkg"
+  },
+  {
+   "name": "Kernel",
+   "description": "Linux 6.18 LTS purgado (arm64 y riscv), configs y scripts de purga.",
+   "language": "C",
+   "license": "GPL-2.0",
+   "stars": 0,
+   "forks": 0,
+   "openIssues": 0,
+   "pushedAt": "",
+   "url": "https://github.com/Open-Cosmic-Project/Kernel"
+  },
+  {
+   "name": "Libs",
+   "description": "cosmic-core y cosmic-usb: las bibliotecas compartidas.",
+   "language": "Rust",
+   "license": "LGPL-2.1",
+   "stars": 0,
+   "forks": 0,
+   "openIssues": 0,
+   "pushedAt": "",
+   "url": "https://github.com/Open-Cosmic-Project/Libs"
+  },
+  {
+   "name": "Sdk",
+   "description": "cosmic-sdk: lo necesario para escribir apps.",
+   "language": "Rust",
+   "license": "LGPL-2.1",
+   "stars": 0,
+   "forks": 0,
+   "openIssues": 0,
+   "pushedAt": "",
+   "url": "https://github.com/Open-Cosmic-Project/Sdk"
+  },
+  {
+   "name": "Tools",
+   "description": "cosmic-build, cosmic-repo, cosmic-flash, fastboot y cad.",
+   "language": "Go",
+   "license": "GPL-3.0",
+   "stars": 0,
+   "forks": 0,
+   "openIssues": 0,
+   "pushedAt": "",
+   "url": "https://github.com/Open-Cosmic-Project/Tools"
+  },
+  {
+   "name": "Patches",
+   "description": "Parches de Chromium y de Qt.",
+   "language": null,
+   "license": "LGPL-2.1",
+   "stars": 0,
+   "forks": 0,
+   "openIssues": 0,
+   "pushedAt": "",
+   "url": "https://github.com/Open-Cosmic-Project/Patches"
+  },
+  {
+   "name": "Device",
+   "description": "Firmware y paquetes por dispositivo.",
+   "language": null,
+   "license": "MIT",
+   "stars": 0,
+   "forks": 0,
+   "openIssues": 0,
+   "pushedAt": "",
+   "url": "https://github.com/Open-Cosmic-Project/Device"
+  },
+  {
+   "name": "Cosmic-Workspace",
+   "description": "Workspace de Cargo y toolchain compartidos.",
+   "language": "Shell",
+   "license": "MIT",
+   "stars": 0,
+   "forks": 0,
+   "openIssues": 0,
+   "pushedAt": "",
+   "url": "https://github.com/Open-Cosmic-Project/Cosmic-Workspace"
+  },
+  {
+   "name": "Cosmic-Manifest",
+   "description": "Manifiesto de repo: ramas = canales de estabilidad.",
+   "language": null,
+   "license": "BSD-3-Clause",
+   "stars": 0,
+   "forks": 0,
+   "openIssues": 0,
+   "pushedAt": "",
+   "url": "https://github.com/Open-Cosmic-Project/Cosmic-Manifest"
+  },
+  {
+   "name": "Docs",
+   "description": "Especificación y documentación del proyecto.",
+   "language": null,
+   "license": "CC0-1.0",
+   "stars": 0,
+   "forks": 0,
+   "openIssues": 0,
+   "pushedAt": "",
+   "url": "https://github.com/Open-Cosmic-Project/Docs"
+  }
+ ],
+ "members": [],
+ "releases": [],
+ "openPrs": 0,
+ "feed": []
+}

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>OpenCosmicProject · CosmicOS</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="OpenCosmicProject: un sistema operativo móvil abierto (CosmicOS) con paquetes firmados SPS, canales de estabilidad y desarrollo a la vista, en vivo.">
+  <meta name="theme-color" content="#0a0919">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preload" href="fonts/roboto-flex-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <script>
+    // Tema y detección de Chromium antes del primer pintado (evita el parpadeo).
+    try { var t = localStorage.getItem('ocp-theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+    try { if ((navigator.userAgentData && navigator.userAgentData.brands || []).some(function (b) { return b.brand === 'Chromium'; })) document.documentElement.classList.add('chromium'); } catch (e) {}
+  </script>
+</head>
+<body>
+  <!-- Lente líquida: desplaza el fondo para imitar la refracción del vidrio (solo Chromium) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <filter id="lens" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.012 0.018" numOctaves="2" seed="7" result="noise"/>
+      <feGaussianBlur in="noise" stdDeviation="3" result="soft"/>
+      <feDisplacementMap in="SourceGraphic" in2="soft" scale="26" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </svg>
+  <app-root></app-root>
+  <noscript><p style="padding:2rem;font-family:sans-serif">Esta página muestra la actividad de la organización en vivo y necesita JavaScript. Mientras tanto: <a href="https://github.com/Open-Cosmic-Project">github.com/Open-Cosmic-Project</a>.</p></noscript>
+</body>
+</html>

@@ -1,0 +1,369 @@
+{
+ "generatedAt": "2026-11-11T11:13:42.862Z",
+ "repos": [
+  {
+   "name": "Core",
+   "description": "Init (cinitd), supervisor (kernel.root), launcher y orquestador del sistema.",
+   "language": "Rust",
+   "license": "GPL-3.0",
+   "stars": 42,
+   "forks": 8,
+   "openIssues": 0,
+   "pushedAt": "2026-11-11T11:09:42.862Z",
+   "url": "https://github.com/Open-Cosmic-Project/Core"
+  },
+  {
+   "name": "Daemons",
+   "description": "Los ocho demonios: permisos, cortafuegos, logging, notificaciones, energía, push, ajustes y actualizaciones.",
+   "language": "Rust",
+   "license": "AGPL-3.0",
+   "stars": 31,
+   "forks": 6,
+   "openIssues": 1,
+   "pushedAt": "2026-11-11T10:32:42.862Z",
+   "url": "https://github.com/Open-Cosmic-Project/Daemons"
+  },
+  {
+   "name": "UI",
+   "description": "PhanteonWM, CreationDE, teclado en pantalla y pantalla de arranque.",
+   "language": "Rust",
+   "license": "GPL-3.0",
+   "stars": 27,
+   "forks": 5,
+   "openIssues": 2,
+   "pushedAt": "2026-11-11T09:55:42.862Z",
+   "url": "https://github.com/Open-Cosmic-Project/UI"
+  },
+  {
+   "name": "Pkg",
+   "description": "SPS, el gestor de paquetes .sps con repositorio firmado.",
+   "language": "Rust",
+   "license": "GPL-3.0",
+   "stars": 19,
+   "forks": 4,
+   "openIssues": 3,
+   "pushedAt": "2026-11-11T09:18:42.862Z",
+   "url": "https://github.com/Open-Cosmic-Project/Pkg"
+  },
+  {
+   "name": "Kernel",
+   "description": "Linux 6.18 LTS purgado (arm64 y riscv), configs y scripts de purga.",
+   "language": "C",
+   "license": "GPL-2.0",
+   "stars": 63,
+   "forks": 13,
+   "openIssues": 0,
+   "pushedAt": "2026-11-11T08:41:42.862Z",
+   "url": "https://github.com/Open-Cosmic-Project/Kernel"
+  },
+  {
+   "name": "Libs",
+   "description": "cosmic-core y cosmic-usb: las bibliotecas compartidas.",
+   "language": "Rust",
+   "license": "LGPL-2.1",
+   "stars": 12,
+   "forks": 2,
+   "openIssues": 1,
+   "pushedAt": "2026-11-11T08:04:42.862Z",
+   "url": "https://github.com/Open-Cosmic-Project/Libs"
+  },
+  {
+   "name": "Sdk",
+   "description": "cosmic-sdk: lo necesario para escribir apps.",
+   "language": "Rust",
+   "license": "LGPL-2.1",
+   "stars": 9,
+   "forks": 2,
+   "openIssues": 2,
+   "pushedAt": "2026-11-11T07:27:42.862Z",
+   "url": "https://github.com/Open-Cosmic-Project/Sdk"
+  },
+  {
+   "name": "Tools",
+   "description": "cosmic-build, cosmic-repo, cosmic-flash, fastboot y cad.",
+   "language": "Go",
+   "license": "GPL-3.0",
+   "stars": 22,
+   "forks": 4,
+   "openIssues": 3,
+   "pushedAt": "2026-11-11T06:50:42.862Z",
+   "url": "https://github.com/Open-Cosmic-Project/Tools"
+  },
+  {
+   "name": "Patches",
+   "description": "Parches de Chromium y de Qt.",
+   "language": null,
+   "license": "LGPL-2.1",
+   "stars": 7,
+   "forks": 1,
+   "openIssues": 0,
+   "pushedAt": "2026-11-11T06:13:42.862Z",
+   "url": "https://github.com/Open-Cosmic-Project/Patches"
+  },
+  {
+   "name": "Device",
+   "description": "Firmware y paquetes por dispositivo.",
+   "language": null,
+   "license": "MIT",
+   "stars": 5,
+   "forks": 1,
+   "openIssues": 1,
+   "pushedAt": "2026-11-11T05:36:42.862Z",
+   "url": "https://github.com/Open-Cosmic-Project/Device"
+  },
+  {
+   "name": "Cosmic-Workspace",
+   "description": "Workspace de Cargo y toolchain compartidos.",
+   "language": "Shell",
+   "license": "MIT",
+   "stars": 14,
+   "forks": 3,
+   "openIssues": 2,
+   "pushedAt": "2026-11-11T04:59:42.862Z",
+   "url": "https://github.com/Open-Cosmic-Project/Cosmic-Workspace"
+  },
+  {
+   "name": "Cosmic-Manifest",
+   "description": "Manifiesto de repo: ramas = canales de estabilidad.",
+   "language": null,
+   "license": "BSD-3-Clause",
+   "stars": 3,
+   "forks": 1,
+   "openIssues": 3,
+   "pushedAt": "2026-11-11T04:22:42.862Z",
+   "url": "https://github.com/Open-Cosmic-Project/Cosmic-Manifest"
+  },
+  {
+   "name": "Docs",
+   "description": "Especificación y documentación del proyecto.",
+   "language": null,
+   "license": "CC0-1.0",
+   "stars": 18,
+   "forks": 4,
+   "openIssues": 0,
+   "pushedAt": "2026-11-11T03:45:42.862Z",
+   "url": "https://github.com/Open-Cosmic-Project/Docs"
+  }
+ ],
+ "members": [
+  {
+   "login": "Ange",
+   "avatar": "",
+   "url": "https://github.com/Ange"
+  },
+  {
+   "login": "lumen-dev",
+   "avatar": "",
+   "url": "https://github.com/lumen-dev"
+  },
+  {
+   "login": "nova_rs",
+   "avatar": "",
+   "url": "https://github.com/nova_rs"
+  },
+  {
+   "login": "quark42",
+   "avatar": "",
+   "url": "https://github.com/quark42"
+  },
+  {
+   "login": "orbita",
+   "avatar": "",
+   "url": "https://github.com/orbita"
+  },
+  {
+   "login": "ferrum",
+   "avatar": "",
+   "url": "https://github.com/ferrum"
+  },
+  {
+   "login": "zenit",
+   "avatar": "",
+   "url": "https://github.com/zenit"
+  },
+  {
+   "login": "kappa_9",
+   "avatar": "",
+   "url": "https://github.com/kappa_9"
+  },
+  {
+   "login": "helio",
+   "avatar": "",
+   "url": "https://github.com/helio"
+  },
+  {
+   "login": "tauri",
+   "avatar": "",
+   "url": "https://github.com/tauri"
+  },
+  {
+   "login": "mica",
+   "avatar": "",
+   "url": "https://github.com/mica"
+  },
+  {
+   "login": "vega",
+   "avatar": "",
+   "url": "https://github.com/vega"
+  }
+ ],
+ "releases": [
+  {
+   "repo": "Docs",
+   "tag": "spec-v0.3.0",
+   "name": "CosmicOS-spec v0.3.0",
+   "at": "2026-11-11T07:41:42.862Z",
+   "url": "#",
+   "prerelease": false
+  },
+  {
+   "repo": "Cosmic-Manifest",
+   "tag": "eventhorizon-2026.11.09",
+   "name": "Manifiesto 9 de noviembre",
+   "at": "2026-11-09T08:49:42.862Z",
+   "url": "#",
+   "prerelease": true
+  },
+  {
+   "repo": "Kernel",
+   "tag": "v6.18.60-cosmic1",
+   "name": "Linux 6.18.60 LTS (purgado)",
+   "at": "2026-11-08T01:37:42.862Z",
+   "url": "#",
+   "prerelease": true
+  }
+ ],
+ "openPrs": 3,
+ "feed": [
+  {
+   "id": "d0",
+   "kind": "merge",
+   "repo": "Cosmic-Workspace",
+   "actor": "Ange",
+   "avatar": "",
+   "text": "fusionó una PR en",
+   "detail": "#12 Workspace: edición 2024 y licencia SPDX",
+   "url": "https://github.com/Open-Cosmic-Project/Cosmic-Workspace",
+   "at": "2026-11-11T11:10:42.862Z"
+  },
+  {
+   "id": "d1",
+   "kind": "commit",
+   "repo": "Kernel",
+   "actor": "Ange",
+   "avatar": "",
+   "text": "subió 3 commits a eventhorizon de",
+   "detail": "kernel: purga de hostfs y ajustes de Kconfig",
+   "count": 3,
+   "url": "https://github.com/Open-Cosmic-Project/Kernel",
+   "at": "2026-11-11T10:17:42.862Z"
+  },
+  {
+   "id": "d2",
+   "kind": "star",
+   "repo": "Core",
+   "actor": "orbita",
+   "avatar": "",
+   "text": "marcó con estrella",
+   "url": "https://github.com/Open-Cosmic-Project/Core",
+   "at": "2026-11-11T09:24:42.862Z"
+  },
+  {
+   "id": "d3",
+   "kind": "pr-open",
+   "repo": "Tools",
+   "actor": "ferrum",
+   "avatar": "",
+   "text": "abrió una PR en",
+   "detail": "#9 cosmic-fastboot: transporte USB",
+   "url": "https://github.com/Open-Cosmic-Project/Tools",
+   "at": "2026-11-11T08:31:42.862Z"
+  },
+  {
+   "id": "d4",
+   "kind": "release",
+   "repo": "Docs",
+   "actor": "Ange",
+   "avatar": "",
+   "text": "publicó una versión en",
+   "detail": "CosmicOS-spec v0.3.0",
+   "url": "https://github.com/Open-Cosmic-Project/Docs",
+   "at": "2026-11-11T07:38:42.862Z"
+  },
+  {
+   "id": "d5",
+   "kind": "issue",
+   "repo": "Pkg",
+   "actor": "zenit",
+   "avatar": "",
+   "text": "abrió un issue en",
+   "detail": "#4 SPS: verificar la raíz de TUF al arrancar",
+   "url": "https://github.com/Open-Cosmic-Project/Pkg",
+   "at": "2026-11-11T06:45:42.862Z"
+  },
+  {
+   "id": "d6",
+   "kind": "commit",
+   "repo": "Core",
+   "actor": "lumen-dev",
+   "avatar": "",
+   "text": "subió 2 commits a eventhorizon de",
+   "detail": "cdevd: enumeración de dispositivos",
+   "count": 2,
+   "url": "https://github.com/Open-Cosmic-Project/Core",
+   "at": "2026-11-11T05:52:42.862Z"
+  },
+  {
+   "id": "d7",
+   "kind": "fork",
+   "repo": "Libs",
+   "actor": "nova_rs",
+   "avatar": "",
+   "text": "hizo un fork de",
+   "url": "https://github.com/Open-Cosmic-Project/Libs",
+   "at": "2026-11-11T04:59:42.862Z"
+  },
+  {
+   "id": "d8",
+   "kind": "comment",
+   "repo": "Docs",
+   "actor": "kappa_9",
+   "avatar": "",
+   "text": "comentó en",
+   "detail": "D-48: DCO sin CLA frente a doble licencia",
+   "url": "https://github.com/Open-Cosmic-Project/Docs",
+   "at": "2026-11-11T04:06:42.862Z"
+  },
+  {
+   "id": "d9",
+   "kind": "star",
+   "repo": "Kernel",
+   "actor": "helio",
+   "avatar": "",
+   "text": "marcó con estrella",
+   "url": "https://github.com/Open-Cosmic-Project/Kernel",
+   "at": "2026-11-11T03:13:42.862Z"
+  },
+  {
+   "id": "d10",
+   "kind": "review",
+   "repo": "Daemons",
+   "actor": "quark42",
+   "avatar": "",
+   "text": "revisó una PR en",
+   "detail": "cbrokerd: lista de permisos",
+   "url": "https://github.com/Open-Cosmic-Project/Daemons",
+   "at": "2026-11-11T02:20:42.862Z"
+  },
+  {
+   "id": "d11",
+   "kind": "create",
+   "repo": "Sdk",
+   "actor": "Ange",
+   "avatar": "",
+   "text": "creó la rama eventhorizon en",
+   "url": "https://github.com/Open-Cosmic-Project/Sdk",
+   "at": "2026-11-11T01:27:42.862Z"
+  }
+ ]
+}
